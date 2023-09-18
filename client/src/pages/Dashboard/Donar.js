@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../components/shared/Layout/Layout";
+
 import API from "../../services/API";
 import moment from "moment";
+import Layout from "../../components/shared/Layout/Layout";
 
 const Donar = () => {
   const [data, setData] = useState([]);
@@ -9,7 +10,7 @@ const Donar = () => {
   const getDonars = async () => {
     try {
       const { data } = await API.get("/inventory/get-donars");
-      //   console.log(data);
+       console.log(data);
       if (data?.success) {
         setData(data?.donars);
       }

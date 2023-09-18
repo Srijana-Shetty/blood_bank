@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const inventorySchema = new mongoose.Schema(
 	{
 		inventoryType: {
@@ -37,9 +36,6 @@ const inventorySchema = new mongoose.Schema(
 			ref: 'users',
 			required: function () {
 				return this.inventoryType === 'in';
-			},
-		},
-	},
-	{ timestamps: true }
-);
+			},},
+	},{ timestamps: true });
 module.exports = mongoose.model('Inventory', inventorySchema);

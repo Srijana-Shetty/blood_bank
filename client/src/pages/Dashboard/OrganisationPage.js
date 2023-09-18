@@ -13,7 +13,7 @@ const OrganisationPage = () => {
     try {
       if (user?.role === "donar") {
         const { data } = await API.get("/inventory/get-orgnaisation");
-          // console.log(data);
+        //   console.log(data);
         if (data?.success) {
           setData(data?.organisations);
         }
@@ -22,7 +22,7 @@ const OrganisationPage = () => {
         const { data } = await API.get(
           "/inventory/get-orgnaisation-for-hospital"
         );
-        //  console.log(data);
+        //   console.log(data);
         if (data?.success) {
           setData(data?.organisations);
         }

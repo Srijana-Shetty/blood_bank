@@ -238,7 +238,7 @@ const getOrganisationController = async (req,res) => {
 const getOrganisationForHospitalController = async (req,res) => {
     try {
         const donar = req.body.userId
-        const orgId = await inventoryModel.distinct('organisation',{donar})
+        const orgId = await inventoryModel.distinct('organisation')
         //find org
         const organisations = await userModel.find({
             _id: {$in: orgId}
